@@ -1,0 +1,25 @@
+@import '../../styles/base/variables';
+
+.Btn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+
+  color: #ffffff;
+  font-weight: $font-weight-h;
+  background: var(--primary);
+  padding: 0.3em 1em;
+  border-radius: 5px;
+  &:focus,
+  &:hover {
+    background: #4e2375;
+    box-shadow: 0 0 0 3px #ffffff;
+  }
+}

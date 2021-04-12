@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Radio from '../../components/Radio/Radio';
+import Btn from '../../components/Btn/Btn';
 import styles from './Home.module.scss';
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
         </p>
       </section>
       <section>
+        <h2>What’s your prediction?</h2>
         <div className={styles.prediction}>
           <Radio
             name="prediction"
@@ -57,6 +59,9 @@ const Home = () => {
             Doesn’t matter
           </Radio>
         </div>
+      </section>
+      <section style={{ marginTop: '2em' }} className="text-center">
+        <Btn>Let’s make a deal</Btn>
       </section>
     </div>
   );
