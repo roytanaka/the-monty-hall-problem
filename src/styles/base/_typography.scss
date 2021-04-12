@@ -1,0 +1,18 @@
+h1,
+h2,
+h3 {
+  color: var(--primary);
+  text-align: center;
+  font-family: Londrina Solid;
+  font-weight: $font-weight-h;
+  letter-spacing: 0px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  margin-bottom: 0.8rem;
+}
