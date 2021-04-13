@@ -60,7 +60,7 @@ const Home = () => {
           </Radio>
         </div>
       </section>
-      <section style={{ marginTop: '2em' }} className="text-center">
+      <section className="text-center">
         <Btn>Let’s make a deal</Btn>
       </section>
     </div>
