@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Radio from '../../components/Radio/Radio';
 import Btn from '../../components/Btn/Btn';
 import styles from './Home.module.scss';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [prediction, setPrediction] = useState(null);
@@ -61,7 +62,9 @@ const Home = () => {
         </div>
       </section>
       <section className="text-center">
-        <Btn>Let’s make a deal</Btn>
+        <Link to="/lets-make-a-deal">
+          <Btn>Let’s make a deal</Btn>
+        </Link>
       </section>
     </div>
   );
