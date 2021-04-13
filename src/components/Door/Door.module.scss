@@ -1,0 +1,57 @@
+@import '../../styles/base/variables';
+@import '../../styles/base/mixins';
+
+.DoorFrame {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  width: 100%;
+  max-width: $door-width;
+  height: 100%;
+  border: 5px solid black;
+  overflow: hidden;
+  &:nth-of-type(1) {
+    background-image: url('https://media1.tenor.com/images/06e438bb03983a7c7087618f20b2c25a/tenor.gif?');
+    grid-area: door-1;
+  }
+
+  &:nth-of-type(2) {
+    background-image: url('https://media1.tenor.com/images/242be378374e47f6fa5163f0f6e7b97f/tenor.gif');
+    grid-area: door-2;
+  }
+
+  &:nth-of-type(3) {
+    background-image: url('https://media1.tenor.com/images/3c0e1031ab79cee528dc1a624711f721/tenor.gif');
+    grid-area: door-3;
+  }
+}
+@include break($large-break-point) {
+  .DoorFrame {
+    // width: 10em;
+    height: 12em;
+    &:nth-of-type(1) {
+      transform: rotateY(50deg) translateZ(150px) translateX(-70px);
+    }
+
+    &:nth-of-type(3) {
+      transform: rotateY(-50deg) translateZ(150px) translateX(70px);
+    }
+  }
+}
+
+.Door {
+  margin-left: -1%;
+  background: blue;
+  height: 100%;
+  width: 102%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 500ms;
+}
+
+.DoorOpen {
+  transform: translateY(-100%);
+}

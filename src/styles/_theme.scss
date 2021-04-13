@@ -4,18 +4,19 @@ html {
     linear-gradient(219deg, var(--yellow) 0%, var(--turquoise) 100%) 0% 0%
     no-repeat;
   font-size: 1rem;
-  @include break($large-break-point) {
+  @include break(1260px) {
     font-size: 1.4rem;
   }
 }
 
 body {
+  padding-top: 1em;
   font-family: $font-family-body;
   font-weight: $font-weight-body;
 }
 
 .home {
-  height: 100vh;
+  // height: 100vh;
   display: grid;
   justify-content: center;
   align-content: center;

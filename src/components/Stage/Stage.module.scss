@@ -1,0 +1,47 @@
+@import '../../styles/base/variables';
+@import '../../styles/base/mixins';
+
+.Stage {
+  height: 80vh;
+  display: grid;
+  /* justify-content: center;
+  align-content: center; */
+  grid-template-columns: 1.5em 1fr 1.5em;
+  grid-template-rows: min-content repeat(3, auto);
+  grid-template-areas:
+    '. header .'
+    '. door-1 .'
+    '. door-2 . '
+    '. door-3 .';
+  gap: 1%;
+  justify-items: center;
+  align-items: center;
+  header {
+    grid-area: header;
+  }
+  @include break($large-break-point) {
+    height: auto;
+    grid-template-columns: auto repeat(3, $door-width - 7) auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      '. header header header .'
+      '. door-1 door-2 door-3 .';
+    perspective: 2000px;
+  }
+  header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1em 0.5em;
+  }
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+}

@@ -41,7 +41,7 @@ const Radio = props => {
       <span
         className={[
           styles.Radio__label,
-          props.isSelected ? styles.selected : '',
+          props.isSelected && styles.selected,
         ].join(' ')}
       >
         {props.children}
